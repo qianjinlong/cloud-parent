@@ -27,12 +27,13 @@
         <spring-cloud.version>Hoxton.SR9</spring-cloud.version>
         <!-- Commons -->
         <lombok.version>1.18.16</lombok.version>
-        <mysql.version>8.0.22</mysql.version>
-        <druid.version>1.2.4</druid.version>
-        <log4j.version>1.2.17</log4j.version>
         <hutool.version>5.3.10</hutool.version>
         <fastjson.version>1.2.70</fastjson.version>
+        <log4j.version>1.2.17</log4j.version>
+        <modelmapper.version>2.3.0</modelmapper.version>
         <swagger.version>3.0.0</swagger.version>
+        <mysql.version>8.0.22</mysql.version>
+        <druid.version>1.2.4</druid.version>
         <mybatis-plus.version>3.4.1</mybatis-plus.version>
         <velocity-engine-core.version>2.2</velocity-engine-core.version>
     </properties>
@@ -74,24 +75,6 @@
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
             </dependency>
-            <!-- MySQL 数据库驱动 -->
-            <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>${mysql.version}</version>
-            </dependency>
-            <!-- druid 数据源 -->
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>druid-spring-boot-starter</artifactId>
-                <version>${druid.version}</version>
-            </dependency>
-            <!-- log4j: druid 要用这个 -->
-            <dependency>
-                <groupId>log4j</groupId>
-                <artifactId>log4j</artifactId>
-                <version>${log4j.version}</version>
-            </dependency>
             <!-- Hutool 工具包 -->
             <dependency>
                 <groupId>cn.hutool</groupId>
@@ -104,11 +87,35 @@
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
             </dependency>
+            <!-- log4j: druid 要用这个 -->
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+            <!-- ModelMapper -->
+            <dependency>
+                <groupId>org.modelmapper</groupId>
+                <artifactId>modelmapper</artifactId>
+                <version>${modelmapper.version}</version>
+            </dependency>
             <!-- Swagger -->
             <dependency>
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-boot-starter</artifactId>
                 <version>${swagger.version}</version>
+            </dependency>
+            <!-- MySQL 数据库驱动 -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+            <!-- druid 数据源 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
             </dependency>
             <!-- MyBatis-Plus -->
             <dependency>
